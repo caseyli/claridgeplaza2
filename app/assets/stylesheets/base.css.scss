@@ -30,3 +30,23 @@ body {
 		};
 	}
 }
+
+/* Flash */
+.flash {
+	border: 2px solid;
+	padding: 10px;
+	border-radius:5px;
+	background:white;
+}
+
+.error {
+	border-color: red;
+}
+
+.success {
+	border-color: green;
+}
+
+.notice {
+	border-color: black;
+}
