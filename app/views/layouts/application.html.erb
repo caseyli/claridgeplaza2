@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+	<%= render "layouts/flash", :flash => flash %>
+	
+	<% if user_signed_in? %>
+	<%= render "layouts/signed_in_bar" %>
+		<div class="signed-in-body">
+	<% end %>
+	
 	<div class="header">
 		<div class="container">
 			<%= render 'layouts/header' %>
@@ -14,11 +22,18 @@
 	</div>
 	<div class="main-body">
 		<div class="container">
-			<% flash.each do |key, value| %>
-				<div class="flash <%= key %>"><%= value %></div>
-			<% end %>
 			<%= yield %>
 		</div>
 	</div>
+	
+	<div class="footer">
+		<div class="container">
+			<%= render 'layouts/footer' %>
+		</div>
+	</div>
+	
+	<% if user_signed_in? %>
+		</div>
+	<% end %>
 </body>
 </html>

@@ -1,0 +1,7 @@
+<h1>News</h1>
+
+<% if admin? %>
+	<%= link_to 'New News post', new_news_post_path, :class => "button gray-button" %>
+<% end %>
+
+<%= render @news_posts %>

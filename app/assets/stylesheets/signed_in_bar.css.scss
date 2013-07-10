@@ -1,0 +1,33 @@
+/* SIGNED IN BAR */
+
+$signed-in-bar-height:20px;
+$signed-in-bar-padding:10px;
+
+.signed-in-bar {
+	width:100%;
+	background:black;
+	color:#eee;
+	position:fixed;
+	padding:$signed-in-bar-padding 0px;
+	z-index:1000;
+	height:$signed-in-bar-height;
+	font-family: "Arial", sans-serif;
+	font-size:12px;
+	a {
+		
+		color:white;
+		&:visited {
+			color:white
+		};
+		
+		&:hover {
+			color:#999;
+		}
+	}
+}
+
+.signed-in-body {
+	padding-top:$signed-in-bar-height + $signed-in-bar-padding + $signed-in-bar-padding;
+}
+
+

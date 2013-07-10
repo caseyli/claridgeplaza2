@@ -1,0 +1,23 @@
+<div class="news-post">
+	<div class="news-post-header">
+		<div class="news-post-title left">
+			<%= news_post.title %>
+		</div>
+		<div class="news-post-date right">
+			<%= convert_time_string(news_post.updated_at) %>
+		</div>
+		<div class="clear">
+			
+		</div>
+	</div>
+	<div class="news-post-body">
+		<%= news_post.body %>
+	</div>
+	<% if admin? %>
+	<div class="news-post-actions">
+		<%= link_to 'Show', news_post, :class => "button gray-button" %>
+	    <%= link_to 'Edit', edit_news_post_path(news_post), :class => "button gray-button" %>
+	    <%= link_to 'Destroy', news_post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button gray-button" %>
+	</div>
+	<% end %>
+</div>

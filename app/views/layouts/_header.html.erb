@@ -1,11 +1,16 @@
-<%= link_to "Home", "/" %>
+<div class="logo left">
+	<%= image_tag "logo_small.png", :class => "header-logo" %>
+</div>
+<div class="nav right">
+	<%= link_to "Home", "/" %>
+	<%= link_to "News", "/news_posts" %>
+	<%= link_to "Newsletters", "/newsletters" %>
+	<%= link_to "Contact", "/contact" %>
+	<% if admin? %>
+		<%= link_to "Users", "/users" %>
+	<% end %>
+</div>
 
-<% if admin? %>
-	<%= link_to "Users", "/users" %>
-<% end %>
-
-<% if user_signed_in? %>
-	<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-<% else %>
-	<%= link_to "Sign In", "/users/sign_in" %>
-<% end %>
+<div class="clear">
+	
+</div>

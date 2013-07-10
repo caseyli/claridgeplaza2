@@ -1,0 +1,15 @@
+<div class="signed-in-bar">
+	<div class="container">
+		<div class="left">
+			SIGNED IN
+			<% if admin? %>
+				/ <%= link_to "Admin Menu", "/admin_menu" %>
+			<% end %>
+		</div>
+		<div class="right">
+			<%= current_user.email %> / 
+			<%= link_to "edit password", edit_user_registration_path %> / 
+			<%= link_to "sign out", destroy_user_session_path, :method => :delete %>         
+		</div>
+	</div>
+</div>

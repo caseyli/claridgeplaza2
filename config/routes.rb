@@ -1,16 +1,23 @@
 Claridgeplaza2::Application.routes.draw do
   
-  devise_for :users
+  resources :news_posts
+  get "/news" => "news_posts#index"
+
+  
 
   root :to => "pages#home"
   
   get "pages/home"
   get "pages/about"
+  get "/newsletters" => "pages#newsletters"
+  get "/contact" => "pages#contact"
   
   match "/home" => "pages#home"
   match "/about" => "pages#about"
-  
-  resources :users
+
+  devise_for :users, :path_names => { :sign_in => 'signin', :sign_out => 'signout', :sign_up => 'signup' }
+  resources :users  
+  match "/signin" => redirect("/users/signin")
   
   match "/users/:id/make_admin" => "users#make_admin"
   match "/users/:id/take_away_admin" => "users#take_away_admin"
