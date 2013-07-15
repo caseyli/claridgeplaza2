@@ -22,6 +22,8 @@ Claridgeplaza2::Application.routes.draw do
   match "/users/:id/make_admin" => "users#make_admin"
   match "/users/:id/take_away_admin" => "users#take_away_admin"
 
+  get "/admin" => "pages#admin"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

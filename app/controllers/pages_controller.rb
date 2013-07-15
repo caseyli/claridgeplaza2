@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :deny_access_for_non_admins, only: [:admin]
+  
   def home
     @news_posts = NewsPost.all(:limit => 5)
   end
@@ -10,6 +12,9 @@ class PagesController < ApplicationController
   end
   
   def contact
+  end
+  
+  def admin
   end
   
 end
