@@ -1,12 +1,33 @@
-<div class="hero">
-	<%= image_tag "hero.png", :class => "hero-logo" %>
-	<div class="hero-writeup">
-		Welcome to the official 234 Rideau St. Website. Here you will find all the information you'll
-		need including news & announcements, important contact information, requests, and more!
+<div class="sidebar">
+	<div class="sidebar-section">
+		<h1>Important Reminders</h1>
+		<ul class="reminders-list">
+			<% @reminders.each do |reminder| %>
+				<li><%= reminder.body %></li>
+			<% end %>
+		</ul>
+		<% if admin? %>
+			<%= link_to "Manage Reminders", reminders_path %>
+		<% end %>
 	</div>
 </div>
+<div class="main-content">
+	<div class="hero">
+		<%= image_tag "hero.png", :class => "hero-logo" %>
+		<div class="hero-writeup">
+			Welcome to the official 234 Rideau St. Website. Here you will find all the information you'll
+			need including news & announcements, important contact information, requests, and more!
+		</div>
+	</div>
 
-<h2>Recent News</h2>
-<div class="recent-news">
-	<%= render @news_posts %>
+	<h2>Recent News</h2>
+	<div class="recent-news">
+		<%= render @news_posts %>
+	</div>	
+</div>
+
+
+
+<div class="clear">
+	
 </div>

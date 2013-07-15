@@ -1,5 +1,8 @@
 Claridgeplaza2::Application.routes.draw do
   
+  resources :reminders
+
+
   resources :news_posts
   get "/news" => "news_posts#index"
 

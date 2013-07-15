@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   
   def home
     @news_posts = NewsPost.all(:limit => 5)
+    @reminders = Reminder.all
   end
 
   def about

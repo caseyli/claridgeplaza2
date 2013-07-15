@@ -12,7 +12,21 @@ body {
 
 .container {
 	margin: 0 auto;
-	width: 900px;
+	max-width:960px;
+}
+
+/* Elements */
+
+.resource-table {
+	width:100%;
+	border-collapse:collapse;
+	text-align:left;
+	tr {
+		border:1px solid #eee;
+		td {
+			padding:1px 3px;
+		}
+	}
 }
 
 /* Header */
