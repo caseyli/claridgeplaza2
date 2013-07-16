@@ -56,6 +56,35 @@ body {
 		}
 	}
 	
+	@media (max-width: 480px) {
+		.header {
+			padding:0;
+			text-align:center;
+		}
+		
+
+		.header-logo {
+			display:block;
+			width:40%;
+			height:auto;
+			margin:0 auto;
+		}
+		
+		.nav {
+			width:100%;
+			display:block;
+			padding:0;
+			a {
+				background:#444;
+				width:100%;
+				text-align:center;
+				display:block;
+				padding:0;
+				margin:10px 0px;
+			}
+		}
+	}
+	
 }
 
 /* Footer */
