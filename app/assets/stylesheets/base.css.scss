@@ -17,6 +17,13 @@ body {
 
 /* Elements */
 
+a {
+	color:#4779D3;
+	&:hover {
+		color:#004A99;
+	};
+}
+
 .resource-table {
 	width:100%;
 	border-collapse:collapse;
@@ -94,6 +101,10 @@ body {
 	.footer-info {
 		text-align:center;
 		color:#333;
+	}
+	
+	a {
+		color:black;
 	}
 }
 
