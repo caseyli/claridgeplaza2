@@ -3,8 +3,6 @@ development:
   encoding: unicode
   database: claridgeplaza2
   pool: 5
-  username: postgres
-  password: postgres
   host: 127.0.0.1
   port: 5432
       
@@ -13,8 +11,6 @@ test:
   encoding: unicode
   database: claridgeplaza2
   pool: 5
-  username: postgres
-  password: postgres
   host: 127.0.0.1
   port: 5432
 
@@ -23,7 +19,5 @@ production:
   encoding: unicode
   database: claridgeplaza2
   pool: 5
-  username: postgres
-  password: postgres
   host: 127.0.0.1
   port: 5432
